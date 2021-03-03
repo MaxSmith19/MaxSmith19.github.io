@@ -1,0 +1,389 @@
+@charset "utf-8";
+/*CSS Document*/
+/*                                                  INDEX AND MISC                                      */
+/* Animations */
+@keyframes navColour{
+    from{background-color: darkgreen; color: white;}
+    to{background-color: lightgray; color: black;}
+}
+@keyframes socialsAnimation{
+    /* Transform property gives a 2d/3d animation to an element. In this case, it rotates the image 90 degrees per 1/4 of the animation */
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(90deg);}
+    50%{transform: rotate(180deg);}
+    75%{transform: rotate(270deg);}
+    100%{transform: rotate(360deg);}
+}
+@keyframes linkedIn{
+    /* In this case, it moves the image two pixels horizontally and then one pixel vertically, and also rotates it a few degrees per 10% of the duration of the animation, making it look like its rumbling*/
+    0%{transform: translate(2px, 1px) rotate(0deg)}
+    10%{transform: translate(2px, 1px)rotate(-2deg);}
+    20%{transform: translate(2px, 1px)rotate(2deg);}
+    30%{transform: translate(2px, 1px)rotate(0deg);}
+    40%{transform: translate(2px, 1px)rotate(-2deg);}
+    50%{transform: translate(2px, 1px)rotate(2deg);}
+    60%{transform: translate(2px, 1px)rotate(0deg);}
+    70%{transform: translate(2px, 1px)rotate(-2deg);}
+    80%{transform: translate(2x, 1px)rotate(2deg);}
+    90%{transform: translate(2px, 1px)rotate(0deg);}
+    100%{transform: translate(2px, 1px)rotate(-2deg);}
+}
+/*Navigation Bar*/
+.navBarMain{
+    /* remove the bullet point, have no margin or padding as a list does. Ensure there is no overflow (i.e. scroll) */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border: 4px solid black;
+    border-bottom: 0px;
+}
+.navBar{
+    /* Have each list move to the left instead of floating to the bottom (as default)*/
+    float: left;
+}
+.navBarMain a{
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navBarMain a:hover{
+    /* The animation changes from dark green to white, so background must start as dark green. Lasts 2 seconds, carries on infinitely and alternates  (reverses the animation) to make the animation more smooth*/
+    background-color: darkgreen;
+    animation-name: navColour;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.navBar{
+    font: 30px montserrat, sans-serif;    
+    padding: 10px;
+}
+/* Body + Misc*/
+.column.disabled{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.header{
+    font: 50px orbitron, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    margin-bottom: 5px;
+    color: lightgrey;
+}
+body{ 
+    background-color: rgb(220, 220, 220);
+}
+.column{
+    /*Account for the fact that the borders take up a few pixels.*/
+    width: 32.3%;
+    border: 3px solid black;
+    float: left;
+    font: 20px montserrat, sans-serif;
+    height: 600px;
+    padding: 5px;
+    
+    /* As there are three columns, they each need to take up a half of the page, therefore 30% width (and space for additional padding) */
+}
+.row:after{
+    /* Ensures that there is "content" after the rows so that there is not empty space. */
+    content: "";
+    display: table;
+    clear: both;
+}
+/* LEFT COLUMN*/
+.left{
+    background-color: rgb(128, 128, 128, 0.63);
+}
+.maxPic{
+    /* the image floats to the left of the text, so that it gives the aesthetic that I wanted*/
+    float:left;
+    position: relative;
+    border: 5px double black;
+    width: relative;
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 250px;
+    height: 200px;
+}
+
+.upper{
+    border: 0px solid black;
+    height: 220px;
+    font: 20px montserrat, sans-serif;
+    margin-bottom: 5px;
+}
+.lower{
+    border-top: 2px solid black;
+    border-bottom: 0px;
+    font: 25px montserrat, sans-serif;
+}
+.links{
+    text-decoration: none;
+    font: inherit;
+}
+
+.linkMain{
+    text-align: center;
+    text-decoration: none;
+}
+.links:hover{
+    color:red;
+}
+/* MIDDLE COLUMN */
+.who{
+    font: 23px roboto, sans-serif;
+    padding-bottom: 0;
+}
+.middle{
+    border-left: 0px;
+    background-color: rgb(179, 179, 199);
+    font: 20px montserrat, sans-serif;
+}
+/* RIGHT COLUMN*/
+.right{
+    border-left: 0px;
+    background-color: rgb(207, 182, 182);
+    font: 20px montserrat, sans-serif;
+    padding-right: 21px;
+}
+
+/* FOOTER */
+.footColumn{
+    width: 33.3%;
+    height: 120px;
+    float: left;
+    font: 20px montserrat;
+    text-align: center;
+}
+.footNav{
+    text-decoration: none;
+    list-style: none;
+    text-align: left;
+}
+.socials img{
+    margin-left: 10px;
+}
+.socials img:hover{
+    animation-name: socialsAnimation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.CpdBrief{
+    font: 23px montserrat, sans-serif;
+}
+
+/*                                       ABOUT ME                                               */
+.ytVid{
+    margin-left: 100px;
+    height: 200px;
+    width: 355px;
+    border: 1px solid black;
+}
+.aboutMid{
+    padding: 0;
+    padding-bottom: 10px;
+}
+.aboutRight{
+    padding-right: 31px;
+}
+.aboveTable{
+    padding-top: 15px;
+}
+.midImg{
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+.noPadding{
+    padding-bottom: 50px;
+}
+
+/*                                      PROFESSIONAL DEVELOPMENT                                     */
+.smallerText{
+    font: 18px montserrat, sans-serif;
+}
+.profDevUp{
+    height:40%
+}
+.noMargin{
+    margin:0;
+}
+.linkedIn:hover{
+    animation-name: linkedIn;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+.cpdTable{
+    margin-top: 70px;
+    margin-left: 15px;
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td{
+    border: 2px solid black;
+    background-color: white;
+    font: 18px montserrat, sans-serif;
+}
+.profRight{
+    padding-right: 21px;
+}
+.cipher{
+    height: 140px;
+    width: 370px;
+    margin-left:15px;
+    padding-top: 40px;
+}  
+
+/*                                                             MLH                                                                              */
+.mobileImg{
+    width: 48%;
+    padding-left: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10px
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1600px){
+    /* for laptops as some text goes out of the column*/
+    .column{
+        height: 600px;
+    }
+    .lose{
+        display: none;
+    }
+    .right{
+        padding-right: 6px;
+    }
+    .ytVid{
+        height: 180px;
+        width: 300px;
+    }
+    .cipher{
+        padding-top:40px;
+        width: 250px;
+    }
+    td, th{
+        width: 10%;
+        font: 18px montserrat;
+    }
+    .cpdTable{
+        margin: 0;
+    }
+    .noPadding{
+        padding-bottom: 0;
+    }
+    .mobileImg{
+        width: 47%;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-left: 5;
+        padding-top: 50px;
+    }
+    .mlhTable td, th{
+        font: 15px montserrat;
+    }
+    .aboutRight{
+        padding-right: 16px;
+    }
+    .cipher{
+        padding-top: 10px;
+    }
+    .MLHMiddle, .MLHLeft, .MLHRight{
+        height: 670px;
+    }
+    .mobileImg1{
+        padding-bottom: 50px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    /* For mobile phones and some tablet devices: */
+
+    .column{
+        float: none;
+    }
+    .left, .middle, .right {
+      width: auto;
+      border: 3px solid black;
+      padding: 5px;
+      height: auto;
+    }
+    .upper{
+        text-align: center;
+        padding-bottom: 20px;
+        height: auto;
+    }
+    .maxProfile{
+        float: none;
+        display: block;
+        margin-bottom: 70px;
+    }
+    .maxPic{
+        float: none;
+        margin-left: 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .lower{
+        border: 0px;
+        border-top: 3px solid black;
+        margin: 5px;
+        height: auto;
+    }
+    .navBar{
+        display: block;
+        width: 100%;
+        float: left;
+        padding-right: 0;
+    }
+    .navBarMain{
+        padding: 0px 0px;
+    }
+    .footColumn{
+        width: 30%;
+    }
+    .ytVid{
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+        height: 15%;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .aboutRight{
+        height: 100%;
+    }
+    .aboutRight{    
+        height: 100%;
+    }
+    .profDevUp{
+        height: 40%;
+    }
+    td, th{
+        width: 10%;
+        font: 10px montserrat, sans-serif;
+        margin: 0;
+    }
+    .cpdTable{
+        margin: 0;
+    }
+    .cipher{
+        margin-left: 0;
+        width: 95%;
+    }
+    .mobileImg{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        padding-bottom: 10px;
+        padding-left: 0;
+    }
+    .footNav{
+        padding-left: 0px;
+    }
+  }
