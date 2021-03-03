@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Max Smith portfolio</title> <!--Name of the "Tab"-->
+        <link rel="stylesheet" href="../css/stylesheet.css"> <!--Links Index.html to the CSS (Cascading style sheet) file rather than hard-coding-->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Orbitron:wght@800&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8"/>
+
+    </head>
+    <body>
+        <div class="header">
+            <a id=top></a>
+            <h1 class="header">Max Smith's Portfolio</h1>
+        </div>
+        <ul class="navBarMain">
+            <li><a class=navBar href="../index.html">Home</a></li>
+            <li><a class=navBar href="/components/AboutMe.html">About me</a></li>
+            <li><a class=navBar href="/components/ProfDev.html">Prof. Development</a></li>
+            <li><a class=navBar href="/components/MLH.html">MLH</a></li>
+        </ul>
+        <div class="row">
+                <div class="column left">
+                        <h2 style="text-align: center; margin: 4px;">Who am I?</h2>
+                        <p>My name is Max Smith, I was born in a small town called Felixstowe in Suffolk. Well known for having the biggest and busiest port in the UK. </p>
+                        <p>In my spare time, I like to play virtual reality games and program in python. I also spend some of my time trying to learn more programming languages. Such as C++</p>
+                        <p class="noPadding">I have also created and edited a few videos for showing off "BeatSaber", a virtual reality game, to my friends</p>
+                        <video class=ytVid controls>
+                            <source src="../img/IPlayBeatSaber.mp4" type="video/mp4">
+                                Your browser does not support videos
+                        </video>
+                    </div>
+            <div class="column middle aboutMid">
+                <img class="midImg" src="../img/Felixstowe.jpg" alt="Picture of felixstowe" style="width: 100%;height: 50%">
+                <img class="midImg" src="../img/FelixstowePier.jpg" alt="Picture of felixstowe pier" style="width: 100%;height: 50%;">
+            </div>
+            <div class="column right aboutRight">
+                <h2 style="text-align: center; text-decoration: underline;">Projects</h2>
+                <p>My most notable project was the one that I created during my computer science A-level, <strong>"Moview"</strong></p>
+                <p>Moview was created in python and was created with the intention of getting movie reviews through the use of tweets</p>
+                <p>These tweets would go through sentiment analysis to convert those tweets into positive or negative. At which point the movie would be given a rating, stored into an SQL server and then output to a website-based GUI, which was created using the python framework, Flask</p>
+                <p>In addition to this, I am currently working on a discord bot which allows for gambling games to be played using the service</p>
+            </div>
+        </div>
+        <hr>
+        <footer>
+            <div class="footerRow">
+                <div class="footColumn">
+                    <ul class=footNav>        
+                        <li><a class="footNav links" href="/index.html">Home</a></li>
+                        <li><a class="footNav links" href="/components/AboutMe.html">About me</a></li>
+                        <li><a class="footNav links" href="/components/ProfDev.html">Prof. Dev.</a></li>
+                        <li><a class="footNav links" href="/components/MLH.html">MLH</a></li>
+                    </ul>
+                </div>
+                <div class="footColumn">
+                    <a class="socials" href="https://www.instagram.com/maximus_millian/" target="_blank"><img src="/img/Instagram.png" alt="Instagram" style=width:50px;height:50px;></a>
+                        <a class="socials" href="https://twitter.com/MSmth19" target="_blank"><img src="/img/Twitter.png" alt="Twitter" style=width:50px;height:50px;></a>
+                        <a class="socials" href="https://www.linkedin.com/in/max-smith-57673a198/" target="_blank"><img src="/img/LinkedIn.png" alt="LinkedIn" style=width:50px;height:50px;><br></a>
+                        <a href="#top">Return to top</a>
+
+                </div>
+                <div class="footColumn">
+                    <a class="links" href="https://github.com/MaxSmith19" style="text-decoration: none;">My github repository<br></a>
+
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
